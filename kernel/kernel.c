@@ -5,34 +5,49 @@
 #include <readline/history.h>
 
 #include "system.h"
-void print_minios(char* str);
+void print_minios(char *str);
 
-int main() {
+int main()
+{
     print_minios("[MiniOS SSU] Hello, World!");
 
     char *input;
 
-    while(1) {
+    while (1)
+    {
         // readline을 사용하여 입력 받기
         input = readline("커맨드를 입력하세요(종료:exit) : ");
 
-        if (strcmp(input,"exit") == 0) {
+        if (strcmp(input, "exit") == 0)
+        {
             break;
         }
 
-        if (strcmp(input,"minisystem") == 0){
+        if (strcmp(input, "minisystem") == 0)
+        {
             minisystem();
         }
-        else system(input);
+
+        if (strcmp(input, "function2") == 0)
+        {
+            function2();
+        }
+        if (strcmp(input, "fork start") == 0)
+        {
+            newFork();
+        }
+        else
+            system(input);
     }
 
     // 메모리 해제
     free(input);
     print_minios("[MiniOS SSU] MiniOS Shutdown........");
 
-    return(1);
+    return (1);
 }
 
-void print_minios(char* str) {
-        printf("%s\n",str);
+void print_minios(char *str)
+{
+    printf("%s\n", str);
 }
