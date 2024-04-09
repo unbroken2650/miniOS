@@ -12,6 +12,7 @@ int main()
     print_minios("[MiniOS SSU] Hello, World!");
 
     char *input;
+    char *input_num;
 
     while (1)
     {
@@ -35,6 +36,20 @@ int main()
         if (strcmp(input, "fork start") == 0)
         {
             newFork();
+        }
+        if (strcmp(input, "ipc start") == 0)
+        {
+            input_num = readline("Type Number: ");
+            char *ipc_argv[] = {"ipc", input_num, NULL};
+            int ipc_argc = sizeof(ipc_argv) / sizeof(char *) - 1;
+            if (input_num != NULL && input_num != "\n")
+            {
+                ipc(ipc_argc, ipc_argv);
+            }
+            else
+            {
+                printf("No valid number");
+            }
         }
         else
             system(input);
