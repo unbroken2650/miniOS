@@ -23,18 +23,22 @@ int main()
             break;
         }
 
-        if (strcmp(input, "minisystem") == 0)
+        else if (strcmp(input, "minisystem") == 0)
         {
             minisystem();
         }
 
-        if (strcmp(input, "function2") == 0)
+        else if (strcmp(input, "function2") == 0)
         {
             function2();
         }
-        if (strcmp(input, "fork start") == 0)
+        else if (strcmp(input, "fork start") == 0)
         {
             newFork();
+        }
+        else if (strcmp(input, "ipc start") == 0)
+        {
+            ipc();
         }
         else
             system(input);
