@@ -40,6 +40,10 @@ int main()
         {
             ipc();
         }
+        else if (strcmp(input, "what is pi") == 0)
+        {
+            week7();
+        }
         else
             system(input);
     }
