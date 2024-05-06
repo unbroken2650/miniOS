@@ -1,6 +1,13 @@
 {
     "files.associations": {
+<<<<<<< HEAD
         "system.h": "c",
         "string.h": "c"
+=======
+        "readline.h": "c",
+        "stdlib.h": "c",
+        "string.h": "c",
+        "unistd.h": "c"
+>>>>>>> 3c963fd68c47e345ce0b69d548ccbc6229b64c6d
     }
 }

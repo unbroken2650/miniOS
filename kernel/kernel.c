@@ -24,19 +24,20 @@ int main()
             break;
         }
 
-        if (strcmp(input, "minisystem") == 0)
+        else if (strcmp(input, "minisystem") == 0)
         {
             minisystem();
         }
 
-        if (strcmp(input, "function2") == 0)
+        else if (strcmp(input, "function2") == 0)
         {
             function2();
         }
-        if (strcmp(input, "fork start") == 0)
+        else if (strcmp(input, "fork start") == 0)
         {
             newFork();
         }
+<<<<<<< HEAD
         if (strcmp(input, "ipc start") == 0)
         {
             input_num = readline("Type Number: ");
@@ -50,6 +51,15 @@ int main()
             {
                 printf("No valid number");
             }
+=======
+        else if (strcmp(input, "ipc start") == 0)
+        {
+            ipc();
+        }
+        else if (strcmp(input, "what is pi") == 0)
+        {
+            week7();
+>>>>>>> 3c963fd68c47e345ce0b69d548ccbc6229b64c6d
         }
         else
             system(input);
