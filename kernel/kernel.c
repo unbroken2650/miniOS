@@ -45,7 +45,7 @@ int main()
         {
             week7();
         }
-        else if(strcmp(input, "RR")==0)
+        else if (strcmp(input, "RR") == 0)
         {
             roundrobin();
         }
