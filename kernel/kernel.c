@@ -37,21 +37,6 @@ int main()
         {
             newFork();
         }
-<<<<<<< HEAD
-        if (strcmp(input, "ipc start") == 0)
-        {
-            input_num = readline("Type Number: ");
-            char *ipc_argv[] = {"ipc", input_num, NULL};
-            int ipc_argc = sizeof(ipc_argv) / sizeof(char *) - 1;
-            if (input_num != NULL && input_num != "\n")
-            {
-                ipc(ipc_argc, ipc_argv);
-            }
-            else
-            {
-                printf("No valid number");
-            }
-=======
         else if (strcmp(input, "ipc start") == 0)
         {
             ipc();
@@ -59,7 +44,10 @@ int main()
         else if (strcmp(input, "what is pi") == 0)
         {
             week7();
->>>>>>> 3c963fd68c47e345ce0b69d548ccbc6229b64c6d
+        }
+        else if(strcmp(input, "RR")==0)
+        {
+            roundrobin();
         }
         else
             system(input);

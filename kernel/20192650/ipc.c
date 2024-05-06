@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-#include <pthread.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-int count;
-void *runner(void *param);
-
-int ipc(int argc, char *argv[])
-{
-    pthread_t tid;
-    pthread_attr_t attr;
-    pthread_attr_init(&attr);
-    pthread_create(&tid, &attr, runner, argv[1]);
-    pthread_join(tid, NULL);
-    printf("count = %d \n", count);
-}
-
-void *runner(void *param)
-{
-    int i, upper = atoi(param);
-    count = 0;
-    for (i = 1; i < upper; i++)
-    {
-        count += 1;
-    }
-    pthread_exit(0);
-=======
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -71,5 +43,4 @@ int ipc(void)
     }
 
     return 0;
->>>>>>> 3c963fd68c47e345ce0b69d548ccbc6229b64c6d
 }

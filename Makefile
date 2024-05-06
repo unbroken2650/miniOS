@@ -8,11 +8,8 @@ LDFLAGS=-lreadline
 TARGET=minios
 
 # Source, Object files
-<<<<<<< HEAD
-SRCS=kernel/kernel.c kernel/system.c kernel/20192650/fork.c kernel/20192650/ipc.c
-=======
-SRCS=kernel/kernel.c kernel/system.c kernel/20192650/fork.c kernel/20192650/ipc.c kernel/20192650/ipc.c 
->>>>>>> 3c963fd68c47e345ce0b69d548ccbc6229b64c6d
+SRCS := $(wildcard kernel/*.c) $(wildcard kernel/20192650/*.c)
+# SRCS=kernel/kernel.c kernel/system.c kernel/20192650/fork.c kernel/20192650/ipc.c kernel/20192650/estimate_pi.c kernel/20192650/roundrobin.c 
 OBJS=$(SRCS:.c=.o) 
 
 # Include directory
